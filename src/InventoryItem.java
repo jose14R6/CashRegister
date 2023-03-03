@@ -17,7 +17,7 @@ public class InventoryItem {
         cost = itemCost;
         quantity = itemQty;
 
-        totalCost = setTotalCost();
+        setTotalCost();
     }
 
     public void setItemNumber(int itemNum){
@@ -28,7 +28,14 @@ public class InventoryItem {
         this.quantity = itemQty;
     }
 
-    public void setCost(){
-
+    public void setCost(double itemCost){
+        this.cost = itemCost;
     }
+
+    public void setTotalCost(){
+        this.totalCost = this.quantity * this.cost;
+        //return this.totalCost;
+    }
+
+
 }
