@@ -21,7 +21,29 @@ public class InventoryItem {
     }
 
     public void setItemNumber(int itemNum){
-        itemNumber = itemNum;
+        switch (itemNum) {
+            case 1:
+                itemNumber = itemNum;
+                setCost(1.25);
+                break;
+            case 2:
+                itemNumber = itemNum;
+                setCost(0.75);
+                break;
+            case 3:
+                itemNumber = itemNum;
+                setCost(2.25);
+                break;
+            case 4:
+                itemNumber = itemNum;
+                setCost(1.75);
+                break;
+            case 5:
+                itemNumber = itemNum;
+                setCost(1.00);
+                break;
+        }
+        //itemNumber = itemNum;
     }
 
     public void setQuantity(int itemQty){
@@ -48,7 +70,7 @@ public class InventoryItem {
         return cost;
     }
 
-    public static double getTotalCost() {
+    double getTotalCost() {
         return totalCost;
     }
 
